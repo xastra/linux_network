@@ -37,7 +37,7 @@ int main(int argc, char**argv)
         return -1;
     }
 
-    if(connect(sockfd, (struct sockaddr*)&servaddr,sizeof(servaddr))<=0)
+    if(connect(sockfd, (struct sockaddr*)&servaddr,sizeof(servaddr))<0)
     {
         err_sys("connect error\n");
         return -1;
